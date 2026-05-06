@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hooda AbdulShakoor - Cover Letters</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0d0d0d;
+    --mid: #444444;
+    --light: #888888;
+    --rule: #d0d0d0;
+    --page: #ffffff;
+    --font-heading: 'EB Garamond', Georgia, serif;
+    --font-body: 'DM Sans', Helvetica, sans-serif;
+  }
+
+  html { font-size: 10.5pt; }
+
+  body {
+    background: #f0eeeb;
+    font-family: var(--font-body);
+    color: var(--black);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .nav {
+    width: 210mm;
+    margin: 24px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 0 4px;
+  }
+
+  .nav button {
+    font-family: var(--font-body);
+    font-size: 7.8pt;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--mid);
+    background: #e4e1dd;
+    border: none;
+    border-radius: 3px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .nav button:hover { background: #d4d0cb; color: var(--black); }
+  .nav button.active { background: var(--black); color: #ffffff; }
+
+  .page {
+    background: var(--page);
+    width: 210mm;
+    min-height: auto;
+    margin: 10px auto 28px auto;
+    padding: 22mm 20mm 22mm 20mm;
+    box-shadow: 0 4px 40px rgba(0,0,0,0.10);
+    display: none;
+  }
+
+  .page.active { display: block; }
+
+  .sender { margin-bottom: 20px; }
+
+  .sender .name {
+    font-family: var(--font-heading);
+    font-size: 14pt;
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 3px;
+  }
+
+  .sender .details {
+    font-size: 8.5pt;
+    color: var(--mid);
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  .sender .details a {
+    color: var(--mid);
+    text-decoration: none;
+  }
+
+  .sender .details a:hover {
+    text-decoration: underline;
+    color: var(--black);
+  }
+
+  .date-line {
+    font-size: 9pt;
+    color: var(--mid);
+    font-weight: 300;
+    margin-bottom: 18px;
+    font-style: italic;
+  }
+
+  .recipient {
+    margin-bottom: 18px;
+    font-size: 9pt;
+    color: var(--mid);
+    font-weight: 300;
+    line-height: 1.75;
+  }
+
+  .recipient .rec-name {
+    font-weight: 500;
+    color: var(--black);
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 16px 0;
+  }
+
+  .role-label {
+    display: inline-block;
+    font-size: 7.5pt;
+    font-weight: 500;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--light);
+    border: 0.75px solid var(--rule);
+    border-radius: 2px;
+    padding: 3px 8px;
+    margin-bottom: 16px;
+  }
+
+  .salutation {
+    font-size: 9.5pt;
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 14px;
+  }
+
+  .letter-body p {
+    font-size: 9.5pt;
+    line-height: 1.78;
+    color: var(--mid);
+    font-weight: 300;
+    text-align: justify;
+    margin-bottom: 13px;
+  }
+
+  .letter-body p:last-child { margin-bottom: 0; }
+
+  .closing {
+    margin-top: 22px;
+    font-size: 9.5pt;
+    color: var(--mid);
+    font-weight: 300;
+    line-height: 1.9;
+  }
+
+  .closing .sign-name {
+    font-family: var(--font-heading);
+    font-size: 13pt;
+    font-weight: 500;
+    color: var(--black);
+    margin-top: 6px;
+    display: block;
+  }
+
+  .closing .sign-title {
+    font-size: 8.2pt;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--light);
+    display: block;
+    margin-top: 1px;
+  }
+
+  @media print {
+    body { background: white; }
+    .nav { display: none; }
+    .page { display: block !important; margin: 0; box-shadow: none; page-break-after: always; padding: 18mm 18mm; }
+    .page:last-of-type { page-break-after: avoid; }
+    .contact-row a { color: var(--mid); text-decoration: none; }
+  }
+
+  @page { size: A4; margin: 0; }
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <button class="active" onclick="show('general', this)">General</button>
+  <button onclick="show('uxui', this)">UX/UI Design</button>
+  <button onclick="show('frontend', this)">Frontend Dev</button>
+  <button onclick="show('ux', this)">User Experience</button>
+  <button onclick="show('bizdev', this)">Business Dev</button>
+  <button onclick="show('graphic', this)">Graphic Design</button>
+  <button onclick="show('admin', this)">Administrative</button>
+</div>
+
+<!-- GENERAL -->
+<div class="page active" id="general">
+  <div class="sender">
+    <div class="name">Hooda AbdulShakoor</div>
+    <div class="details">
+      Dubai, UAE &nbsp;·&nbsp; (971) 54 359 8368 &nbsp;·&nbsp;
+      <a href="mailto:hoodaabdulshakoor@gmail.com">hoodaabdulshakoor@gmail.com</a>
+      &nbsp;·&nbsp; <a href="https://linkedin.com/in/hooda-abdulshakoor" target="_blank">LinkedIn</a>
+      &nbsp;·&nbsp; <a href="https://github.com/https-hd" target="_blank">GitHub</a>
+    </div>
+  </div>
+  <div class="date-line">May 2026</div>
+  <div class="recipient">
+    <span class="rec-name">Hiring Manager</span><br>
+    [Company Name]<br>
+    Dubai, UAE
+  </div>
+  <hr class="divider">
+  <div class="role-label">General Application</div>
+  <div class="salutation">Dear Hiring Manager,</div>
+  <div class="letter-body">
+    <p>I am writing to express my interest in joining your team. With a First-Class Honours degree in Information Technology, practical experience across UX/UI design, frontend development, and digital operations, and a UAE Golden Visa awarded under the Outstanding Student Category, I bring a profile that is both technically grounded and commercially aware.</p>
+
+    <p>Across my roles, I have consistently operated across more than one function at once. At Top Rated Real Estate, I ran the company's full digital infrastructure — website, CRM, SEO, and lead generation — alongside an active sales desk, which gave me a genuine understanding of how design and technology decisions translate into business outcomes. At RelphaCare, I built an AI-driven healthcare platform end to end, from Figma prototypes through to Next.js and TypeScript deployment, focusing specifically on making the product usable for non-technical patients. Currently, I am deepening my UX and frontend skills through focused self-development while working in a fast-paced commercial role at Rayna Properties, and I am actively looking for an opportunity where I can apply and grow that expertise within a strong team.</p>
+
+    <p>I do not currently have a public portfolio, and I would rather be upfront about that. What I offer in its place is real cross-functional experience, a fast learning curve, and a genuine commitment to delivering quality work. I would welcome the chance to discuss how I can contribute to your organisation.</p>
+
+    <p>Thank you sincerely for considering my application. I look forward to the opportunity to speak further.</p>
+  </div>
+  <div class="closing">
+    Sincerely,
+    <span class="sign-name">Hooda AbdulShakoor</span>
+    <span class="sign-title">UX/UI Designer &nbsp;·&nbsp; Frontend Developer</span>
+  </div>
+</div>
+
+<!-- UX/UI DESIGN -->
+<div class="page" id="uxui">
+  <div class="sender">
+    <div class="name">Hooda AbdulShakoor</div>
+    <div class="details">
+      Dubai, UAE &nbsp;·&nbsp; (971) 54 359 8368 &nbsp;·&nbsp;
+      <a href="mailto:hoodaabdulshakoor@gmail.com">hoodaabdulshakoor@gmail.com</a>
+      &nbsp;·&nbsp; <a href="https://linkedin.com/in/hooda-abdulshakoor" target="_blank">LinkedIn</a>
+      &nbsp;·&nbsp; <a href="https://github.com/https-hd" target="_blank">GitHub</a>
+    </div>
+  </div>
+  <div class="date-line">May 2026</div>
+  <div class="recipient">
+    <span class="rec-name">Hiring Manager</span><br>
+    [Company Name]<br>
+    Dubai, UAE
+  </div>
+  <hr class="divider">
+  <div class="role-label">UX/UI Design</div>
+  <div class="salutation">Dear Hiring Manager,</div>
+  <div class="letter-body">
+    <p>I am applying for a UX/UI Designer position within your organisation. With a First-Class Honours degree in Information Technology and hands-on experience taking products from research through to high-fidelity prototype and live deployment, I am looking to build a focused design career within a team that takes craft seriously.</p>
+
+    <p>At RelphaCare, I owned the full design process for an AI-driven healthcare platform — user research, flow mapping, Figma prototyping, and final implementation in Next.js. The core challenge was not visual; it was designing for patients who were unfamiliar with technology and needed to feel confident at every step. That project shaped how I think about UX: removing friction is more important than adding features. At Top Rated Real Estate, I identified and rebuilt key website user flows based on conversion data, with a measurable impact on lead quality. I am currently sharpening my design skills further through focused practice and self-development alongside my current role.</p>
+
+    <p>I do not yet have a formal portfolio, and I want to be honest about that. I am actively building one and would welcome any opportunity to complete a design task as part of your process. Thank you for your consideration — I look forward to discussing how I can contribute to your team.</p>
+  </div>
+  <div class="closing">
+    Sincerely,
+    <span class="sign-name">Hooda AbdulShakoor</span>
+    <span class="sign-title">UX/UI Designer &nbsp;·&nbsp; Frontend Developer</span>
+  </div>
+</div>
+
+<!-- FRONTEND DEV -->
+<div class="page" id="frontend">
+  <div class="sender">
+    <div class="name">Hooda AbdulShakoor</div>
+    <div class="details">
+      Dubai, UAE &nbsp;·&nbsp; (971) 54 359 8368 &nbsp;·&nbsp;
+      <a href="mailto:hoodaabdulshakoor@gmail.com">hoodaabdulshakoor@gmail.com</a>
+      &nbsp;·&nbsp; <a href="https://linkedin.com/in/hooda-abdulshakoor" target="_blank">LinkedIn</a>
+      &nbsp;·&nbsp; <a href="https://github.com/https-hd" target="_blank">GitHub</a>
+    </div>
+  </div>
+  <div class="date-line">May 2026</div>
+  <div class="recipient">
+    <span class="rec-name">Hiring Manager</span><br>
+    [Company Name]<br>
+    Dubai, UAE
+  </div>
+  <hr class="divider">
+  <div class="role-label">Frontend Development</div>
+  <div class="salutation">Dear Hiring Manager,</div>
+  <div class="letter-body">
+    <p>I am applying for a Frontend Developer role with your organisation. With experience building real products in React.js, Next.js, Vue.js, and TypeScript, backed by a First-Class Honours degree in Information Technology, I am looking to focus my career on frontend development within a team that values both technical quality and user experience.</p>
+
+    <p>At RelphaCare, I took a healthcare platform from Figma prototypes through to full Next.js and TypeScript deployment, writing production code that had to be both technically sound and genuinely accessible to non-technical users. At Top Rated Real Estate, I independently rebuilt and maintained a live commercial website, integrated API and SQL-driven automation, and managed the full digital stack solo — real production work with real business consequences. I also work with AI-assisted development tools including GitHub Copilot, Cursor, and v0 by Vercel as part of my regular workflow, and I am currently deepening my frontend knowledge through ongoing self-development to stay current with modern practices.</p>
+
+    <p>I do not have a public portfolio at this stage, but I am happy to complete a technical task as part of any assessment process. Thank you for your time — I look forward to the opportunity to discuss the role further.</p>
+  </div>
+  <div class="closing">
+    Sincerely,
+    <span class="sign-name">Hooda AbdulShakoor</span>
+    <span class="sign-title">Frontend Developer &nbsp;·&nbsp; UX/UI Designer</span>
+  </div>
+</div>
+
+<!-- USER EXPERIENCE -->
+<div class="page" id="ux">
+  <div class="sender">
+    <div class="name">Hooda AbdulShakoor</div>
+    <div class="details">
+      Dubai, UAE &nbsp;·&nbsp; (971) 54 359 8368 &nbsp;·&nbsp;
+      <a href="mailto:hoodaabdulshakoor@gmail.com">hoodaabdulshakoor@gmail.com</a>
+      &nbsp;·&nbsp; <a href="https://linkedin.com/in/hooda-abdulshakoor" target="_blank">LinkedIn</a>
+      &nbsp;·&nbsp; <a href="https://github.com/https-hd" target="_blank">GitHub</a>
+    </div>
+  </div>
+  <div class="date-line">May 2026</div>
+  <div class="recipient">
+    <span class="rec-name">Hiring Manager</span><br>
+    [Company Name]<br>
+    Dubai, UAE
+  </div>
+  <hr class="divider">
+  <div class="role-label">User Experience</div>
+  <div class="salutation">Dear Hiring Manager,</div>
+  <div class="letter-body">
+    <p>I am writing to express my interest in a User Experience role within your team. My background combines a First-Class Honours degree in Information Technology with practical experience designing products used by real people, in contexts where getting the experience wrong had real consequences.</p>
+
+    <p>At WayWeGo, a carpooling platform I co-designed and presented at Gitex Expand North Star 2024, the process began with user surveys and journey mapping long before any screen was drawn. At RelphaCare, the challenge was more nuanced: designing a healthcare interface for users who were often anxious and unfamiliar with digital tools, where every interaction needed to build rather than lose trust. Both projects took me through the full UX process — research, flows, wireframing, prototyping, and stakeholder presentation — and both reinforced that good UX is as much about understanding people as it is about design patterns. I am currently focused on advancing my UX practice further through self-directed learning and applied work.</p>
+
+    <p>I do not have a polished portfolio yet, and I am transparent about that. I am building one actively and would welcome a brief or task as part of your process. Thank you for your consideration, and I look forward to discussing this role further.</p>
+  </div>
+  <div class="closing">
+    Sincerely,
+    <span class="sign-name">Hooda AbdulShakoor</span>
+    <span class="sign-title">UX Designer &nbsp;·&nbsp; Frontend Developer</span>
+  </div>
+</div>
+
+<!-- BUSINESS DEVELOPMENT -->
+<div class="page" id="bizdev">
+  <div class="sender">
+    <div class="name">Hooda AbdulShakoor</div>
+    <div class="details">
+      Dubai, UAE &nbsp;·&nbsp; (971) 54 359 8368 &nbsp;·&nbsp;
+      <a href="mailto:hoodaabdulshakoor@gmail.com">hoodaabdulshakoor@gmail.com</a>
+      &nbsp;·&nbsp; <a href="https://linkedin.com/in/hooda-abdulshakoor" target="_blank">LinkedIn</a>
+      &nbsp;·&nbsp; <a href="https://github.com/https-hd" target="_blank">GitHub</a>
+    </div>
+  </div>
+  <div class="date-line">May 2026</div>
+  <div class="recipient">
+    <span class="rec-name">Hiring Manager</span><br>
+    [Company Name]<br>
+    Dubai, UAE
+  </div>
+  <hr class="divider">
+  <div class="role-label">Business Development</div>
+  <div class="salutation">Dear Hiring Manager,</div>
+  <div class="letter-body">
+    <p>I am applying for a Business Development role within your organisation. My background sits at an uncommon intersection: a technology and design education combined with direct experience in client acquisition, CRM strategy, lead generation, and off-plan property sales in Dubai's competitive real estate market.</p>
+
+    <p>At Rayna Properties and previously at Top Rated Real Estate, I managed client pipelines and drove off-plan sales while simultaneously building and running the digital infrastructure behind the operation — CRM systems, SEO campaigns, lead funnels, and social media. Understanding both the commercial and digital dimensions of a pipeline gave me a clearer view of where opportunities were being lost and how to recover them. At BrainQuest, I tracked campaign performance metrics in real time and adjusted strategy mid-flight based on engagement data. Together, these experiences gave me a working understanding of how businesses grow and where digital strategy, relationships, and data intersect to make that happen.</p>
+
+    <p>I am eager to channel this breadth into a focused business development role, contribute to growth from day one, and learn from experienced commercial professionals. Thank you for considering my application — I look forward to the opportunity to discuss further.</p>
+  </div>
+  <div class="closing">
+    Sincerely,
+    <span class="sign-name">Hooda AbdulShakoor</span>
+    <span class="sign-title">Business Development &nbsp;·&nbsp; Digital Strategy</span>
+  </div>
+</div>
+
+<!-- GRAPHIC DESIGN -->
+<div class="page" id="graphic">
+  <div class="sender">
+    <div class="name">Hooda AbdulShakoor</div>
+    <div class="details">
+      Dubai, UAE &nbsp;·&nbsp; (971) 54 359 8368 &nbsp;·&nbsp;
+      <a href="mailto:hoodaabdulshakoor@gmail.com">hoodaabdulshakoor@gmail.com</a>
+      &nbsp;·&nbsp; <a href="https://linkedin.com/in/hooda-abdulshakoor" target="_blank">LinkedIn</a>
+      &nbsp;·&nbsp; <a href="https://github.com/https-hd" target="_blank">GitHub</a>
+    </div>
+  </div>
+  <div class="date-line">May 2026</div>
+  <div class="recipient">
+    <span class="rec-name">Hiring Manager</span><br>
+    [Company Name]<br>
+    Dubai, UAE
+  </div>
+  <hr class="divider">
+  <div class="role-label">Graphic Design</div>
+  <div class="salutation">Dear Hiring Manager,</div>
+  <div class="letter-body">
+    <p>I am writing to apply for a Graphic Design role within your team. My design work has developed across several different contexts — product interfaces, brand assets, marketing campaigns, and promotional materials — and I bring with it a technical foundation that allows me to think about visuals as part of a broader digital system rather than as isolated outputs.</p>
+
+    <p>At BrainQuest, I designed and managed all visual brand assets across digital channels, working in Figma, Canva, and Adobe Firefly to maintain a consistent identity across varying formats and platforms. At KT Gamez, I produced promotional materials for game launches under tight briefs and tight deadlines, which built a discipline around making creative decisions quickly without compromising the quality of the output. I also incorporate AI design tools including Figma AI and Adobe Firefly into my ideation process, using them to explore directions efficiently before committing to a final approach. I am currently focused on developing my visual design practice further and building toward a formal portfolio.</p>
+
+    <p>I am happy to complete a design task or brief as part of your assessment process, and I would welcome the opportunity to grow within a skilled creative team. Thank you for your consideration.</p>
+  </div>
+  <div class="closing">
+    Sincerely,
+    <span class="sign-name">Hooda AbdulShakoor</span>
+    <span class="sign-title">Graphic Designer &nbsp;·&nbsp; UX/UI Designer</span>
+  </div>
+</div>
+
+<!-- ADMINISTRATIVE -->
+<div class="page" id="admin">
+  <div class="sender">
+    <div class="name">Hooda AbdulShakoor</div>
+    <div class="details">
+      Dubai, UAE &nbsp;·&nbsp; (971) 54 359 8368 &nbsp;·&nbsp;
+      <a href="mailto:hoodaabdulshakoor@gmail.com">hoodaabdulshakoor@gmail.com</a>
+      &nbsp;·&nbsp; <a href="https://linkedin.com/in/hooda-abdulshakoor" target="_blank">LinkedIn</a>
+      &nbsp;·&nbsp; <a href="https://github.com/https-hd" target="_blank">GitHub</a>
+    </div>
+  </div>
+  <div class="date-line">May 2026</div>
+  <div class="recipient">
+    <span class="rec-name">Hiring Manager</span><br>
+    [Company Name]<br>
+    Dubai, UAE
+  </div>
+  <hr class="divider">
+  <div class="role-label">Administrative</div>
+  <div class="salutation">Dear Hiring Manager,</div>
+  <div class="letter-body">
+    <p>I am writing to express my interest in an administrative position within your organisation. While my primary background is in technology and design, I have consistently worked in roles that required strong organisation, reliable follow-through, and the ability to manage multiple responsibilities accurately under pressure.</p>
+
+    <p>At Top Rated Real Estate, I independently coordinated CRM data management, website maintenance, campaign scheduling, and client follow-up simultaneously — all while maintaining accuracy across live commercial systems. That role required exactly the discipline and self-organisation that defines strong administrative work. At Motus One, I managed client data, event logistics, and internal documentation directly, building habits around precision and professional communication that carry into every environment I work in. I am comfortable across Microsoft Office, Google Workspace, Monday.com, and CRM platforms, and I adapt quickly to new systems and processes.</p>
+
+    <p>I bring a detail-oriented, reliable approach to work, and I tend to look for ways to make the processes I am part of run more smoothly. I would welcome the opportunity to contribute that to your team. Thank you for your time and consideration.</p>
+  </div>
+  <div class="closing">
+    Sincerely,
+    <span class="sign-name">Hooda AbdulShakoor</span>
+    <span class="sign-title">IT Graduate &nbsp;·&nbsp; Digital Operations</span>
+  </div>
+</div>
+
+<script>
+  function show(id, btn) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+  }
+</script>
+</body>
+</html>
