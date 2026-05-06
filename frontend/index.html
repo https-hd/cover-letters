@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cover Letter - Frontend Development</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --black: #0d0d0d; --mid: #444444; --light: #888888;
+    --rule: #d0d0d0; --page: #ffffff;
+    --font-heading: 'EB Garamond', Georgia, serif;
+    --font-body: 'DM Sans', Helvetica, sans-serif;
+  }
+  html { font-size: 10.5pt; }
+  body { background: #f0eeeb; font-family: var(--font-body); color: var(--black); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { background: var(--page); width: 210mm; min-height: auto; margin: 28px auto; padding: 22mm 20mm 22mm 20mm; box-shadow: 0 4px 40px rgba(0,0,0,0.10); }
+  .sender { margin-bottom: 20px; }
+  .sender .name { font-family: var(--font-heading); font-size: 14pt; font-weight: 500; color: var(--black); margin-bottom: 3px; }
+  .sender .details { font-size: 8.5pt; color: var(--mid); font-weight: 300; line-height: 1.7; }
+  .sender .details a { color: var(--mid); text-decoration: none; }
+  .sender .details a:hover { text-decoration: underline; color: var(--black); }
+  .date-line { font-size: 9pt; color: var(--mid); font-weight: 300; margin-bottom: 18px; font-style: italic; }
+  .recipient { margin-bottom: 18px; font-size: 9pt; color: var(--mid); font-weight: 300; line-height: 1.75; }
+  .recipient .rec-name { font-weight: 500; color: var(--black); }
+  .divider { border: none; border-top: 1px solid var(--rule); margin: 16px 0; }
+  .role-label { display: inline-block; font-size: 7.5pt; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--light); border: 0.75px solid var(--rule); border-radius: 2px; padding: 3px 8px; margin-bottom: 16px; }
+  .salutation { font-size: 9.5pt; font-weight: 500; color: var(--black); margin-bottom: 14px; }
+  .letter-body p { font-size: 9.5pt; line-height: 1.78; color: var(--mid); font-weight: 300; text-align: justify; margin-bottom: 13px; }
+  .letter-body p:last-child { margin-bottom: 0; }
+  .closing { margin-top: 22px; font-size: 9.5pt; color: var(--mid); font-weight: 300; line-height: 1.9; }
+  .closing .sign-name { font-family: var(--font-heading); font-size: 13pt; font-weight: 500; color: var(--black); margin-top: 6px; display: block; }
+  .closing .sign-title { font-size: 8.2pt; letter-spacing: 1.2px; text-transform: uppercase; color: var(--light); display: block; margin-top: 1px; }
+  @media print { body { background: white; } .page { margin: 0; box-shadow: none; padding: 18mm 18mm; } }
+  @page { size: A4; margin: 0; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="sender">
+    <div class="name">Hooda AbdulShakoor</div>
+    <div class="details">
+      Dubai, UAE &nbsp;&middot;&nbsp; (971) 54 359 8368 &nbsp;&middot;&nbsp;
+      <a href="mailto:hoodaabdulshakoor@gmail.com">hoodaabdulshakoor@gmail.com</a>
+      &nbsp;&middot;&nbsp; <a href="https://linkedin.com/in/hooda-abdulshakoor" target="_blank">LinkedIn</a>
+      &nbsp;&middot;&nbsp; <a href="https://github.com/https-hd" target="_blank">GitHub</a>
+    </div>
+  </div>
+  <div class="date-line">May 2026</div>
+  <div class="recipient">
+    <span class="rec-name">Hiring Manager</span><br>
+    [Company Name]<br>
+    Dubai, UAE
+  </div>
+  <hr class="divider">
+  <div class="role-label">Frontend Development</div>
+  <div class="salutation">Dear Hiring Manager,</div>
+  <div class="letter-body">
+    <p>I am applying for a Frontend Developer role with your organisation. With experience building real products in React.js, Next.js, Vue.js, and TypeScript, backed by a First-Class Honours degree in Information Technology, I am looking to focus my career on frontend development within a team that values both technical quality and user experience.</p>
+
+    <p>At RelphaCare, I took a healthcare platform from Figma prototypes through to full Next.js and TypeScript deployment, writing production code that had to be both technically sound and genuinely accessible to non-technical users. At Top Rated Real Estate, I independently rebuilt and maintained a live commercial website, integrated API and SQL-driven automation, and managed the full digital stack solo — real production work with real business consequences. I also work with AI-assisted development tools including GitHub Copilot, Cursor, and v0 by Vercel as part of my regular workflow, and I am currently deepening my frontend knowledge through ongoing self-development to stay current with modern practices.</p>
+
+    <p>I do not have a public portfolio at this stage, but I am happy to complete a technical task as part of any assessment process. Thank you for your time — I look forward to the opportunity to discuss the role further.</p>
+  </div>
+  <div class="closing">
+    Sincerely,
+    <span class="sign-name">Hooda AbdulShakoor</span>
+    <span class="sign-title">Frontend Developer &nbsp;&middot;&nbsp; UX/UI Designer</span>
+  </div>
+</div>
+</body>
+</html>
